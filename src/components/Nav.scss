@@ -13,7 +13,19 @@
     padding: 20px;
   }
   .menu__title {
+    position: relative;
     font-size: $letter-size-XL;
+    font-weight: 600;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50px;
+      right: 50px;
+      bottom: 5px;
+      height: 3px;
+      background-color: $color-background-secundary;
+
+    }
   }
   
   .menu__links {

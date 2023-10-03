@@ -5,7 +5,7 @@ import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Favorites from './pages/Favorites';
 import NotFound from './pages/NotFound';
-import BlueTheme from './container/BlueTheme';
+import BlueTheme from './templates/BlueTheme';
 
 const router = createBrowserRouter([
   {

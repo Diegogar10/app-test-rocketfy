@@ -1,3 +1,4 @@
+import { useContext, useEffect, useState } from "react";
 import { Link, useHref } from "react-router-dom";
 import logo from './../assets/icons/logo-app.svg';
 import homeIcon from './../assets/icons/home-icon.svg';
@@ -5,10 +6,25 @@ import profileIcon from './../assets/icons/profile-icon.svg';
 import favoritesIcon from './../assets/icons/favorites-icon.svg';
 import loginIcon from './../assets/icons/login-icon.svg';
 import './Nav.scss';
+import { ContextApp } from "../context";
 
 const Nav = () => {
 
+  const [nameLink, setNameLink] = useState('Log In');
+  const { isAuth } = useContext(ContextApp);
   const path = useHref();
+
+  /* Cambia el nombre del link segun el estado global de autentificación */
+  useEffect(()=>{
+    if(!isAuth) {
+      setNameLink('Log In');
+    } else {
+      setNameLink('Log Out');
+    }
+
+  }, [isAuth]);
+
+  /* Función para definir el link selecionado segun la ruta */
   const linkSeleted = (path, comparePath, children) => {
     if( path ==  comparePath ) {
       return(
@@ -36,7 +52,7 @@ const Nav = () => {
         {linkSeleted(path, '/' ,<><img src={homeIcon} alt="icon home"/><Link to={'/'}>Home</Link></>)}
         {linkSeleted(path, '/favorites' ,<><img src={favoritesIcon} alt="icon favorites"/><Link to={'/favorites'}>Favorites</Link></>)}
         {linkSeleted(path, '/profile' ,<><img src={profileIcon} alt="icon profile"/><Link to={'/profile'}>Profile</Link></>)}
-        {linkSeleted(path, '/login' ,<><img src={loginIcon} alt="icon login"/><Link to={'/login'}>Login</Link></>)}
+        {linkSeleted(path, '/login' ,<><img src={loginIcon} alt="icon login"/><Link to={'/login'}>{nameLink}</Link></>)}
       </ul>
     </nav>
   )

@@ -1,10 +1,26 @@
+import Category from '../components/category';
+import ListCategories from '../container/ListCategories';
+import useGetCategories from '../hooks/useGetCategories';
 import './Home.scss';
+
 
 const Home = () => {
   
+  const { categories } = useGetCategories(); 
+
+  
+
   return (
     <>
-      <p className='title'>Home</p>
+      <ListCategories>
+        {categories && categories.map(data => (
+          <Category 
+            key={data.idCategory}
+            url={data.strCategoryThumb}
+            name={data.strCategory}
+          />
+        ))}
+      </ListCategories>
     </>
   )
 };

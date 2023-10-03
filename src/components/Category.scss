@@ -1,0 +1,32 @@
+@import './../assets/styles/globals.scss';
+
+.category__container{
+  margin: 0 auto;
+  width: 160px;
+  height: 185px;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: $color-background-card;
+  box-shadow: $color-background-primary 0 0 8px;
+  transition: all 0.5s ease ;
+  &:hover {
+    transform: scale(1.05);
+    transition: all 0.5s ease ;
+  }
+  
+  img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: contain;
+    
+  }
+  figcaption {
+    font-size: $letter-size-L;
+    font-weight: 500;
+    background-color: $color-background-primary;
+    padding: 8px ;
+    color: $color-letter-secondary;
+  }
+}
