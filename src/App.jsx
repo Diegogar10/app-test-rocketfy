@@ -5,25 +5,33 @@ import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Favorites from './pages/Favorites';
 import NotFound from './pages/NotFound';
+import BlueTheme from './container/BlueTheme';
 
 const router = createBrowserRouter([
   {
     path:"/",
-    element:<Home/>,
-    errorElement: <NotFound/>
+    element:<BlueTheme/>,
+    errorElement: <NotFound/>,
+    children: [
+      {
+        path:'',
+        element:<Home/>,
+      },
+      {
+        path:"login",
+        element: <Login/>
+      },
+      {
+        path:"profile",
+        element: <Profile/>
+      },
+      {
+        path:"favorites",
+        element: <Favorites/>
+      }
+    ]
   },
-  {
-    path:"/login",
-    element: <Login/>
-  },
-  {
-    path:"/profile",
-    element: <Profile/>
-  },
-  {
-    path:"/favorites",
-    element: <Favorites/>
-  }
+  
 ])
 
 const App = () => {

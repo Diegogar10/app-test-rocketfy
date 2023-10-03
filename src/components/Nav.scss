@@ -1,0 +1,54 @@
+@import './../assets/styles/globals.scss';
+
+.menu__container {
+  width: 20vw;
+  min-width: 240px;
+  height: 100vh;
+  color: $color-letter-primary;
+  background-color: $color-background-primary;
+  
+  .menu__logo,
+  .menu__title,
+  .menu__links {
+    padding: 20px;
+  }
+  .menu__title {
+    font-size: $letter-size-XL;
+  }
+  
+  .menu__links {
+    
+    li {
+      width: 50%;
+      margin: 5px auto;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      padding: 4px 22px;
+
+      img {
+        width: 27px;
+      }
+
+      a{
+        display: block;
+        text-decoration: none;
+        padding: 10px;
+        font-size: $letter-size-L;
+        color: $color-letter-secondary;
+        font-weight: 500;
+      }
+
+      &:hover {
+        border-radius: 15px;
+        background-color: $color-background-secundary;
+      }
+      
+    }
+
+    .selected {
+      border-radius: 15px;
+      background-color: $color-background-secundary;
+    }
+  }
+}
