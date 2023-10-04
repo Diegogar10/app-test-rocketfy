@@ -2,18 +2,19 @@ import { useEffect, useState } from "react";
 
 const useGetCategories = () => {
   
-  const urlAPI = import.meta.env.VITE_API;
-  console.log(urlAPI);
+  //traemos nuestra variable de entorno para la conexion a la API
+  const urlAPI = `${import.meta.env.VITE_API}categories.php`;
   const [categories, setCategories] = useState([]);
   
-  const queryAPI = async (URL)=> {
+  // funcion que consulta las categorias
+  const getCategories = async (URL)=> {
     await fetch(URL)
             .then(res => res.json())
             .then(data => setCategories(data))
   };
 
   useEffect(()=>{
-    queryAPI(urlAPI);
+    getCategories(urlAPI);
   },[])
 
   return categories;

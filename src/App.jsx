@@ -6,6 +6,7 @@ import Profile from './pages/Profile';
 import Favorites from './pages/Favorites';
 import NotFound from './pages/NotFound';
 import BlueTheme from './templates/BlueTheme';
+import Category from './pages/Category';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path:"favorites",
         element: <Favorites/>
+      },
+      {
+        path:"category/:name",
+        element: <Category/>
       }
     ]
   },

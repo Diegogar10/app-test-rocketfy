@@ -1,7 +1,29 @@
-.list__categories {
+@import './../assets/styles/globals.scss';
+
+.list__categories{
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100vh;
+  position: relative;
+  flex-direction: column;
+  .list__title {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: $color-background-primary;
+    color: $color-letter-primary;
+    height: 5vh;
+    padding: 12px 30px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    h2 {
+      font-size: $letter-size-XL;
+      font-weight: 700;
+    }
+  }
+  .list__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 95vh;
+  }
 }

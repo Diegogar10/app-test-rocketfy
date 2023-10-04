@@ -3,7 +3,7 @@
 .category__container{
   margin: 0 auto;
   width: 160px;
-  height: 185px;
+  height: 175px;
   margin: 10px;
   overflow: hidden;
   border-radius: 10px;
@@ -26,6 +26,7 @@
     font-size: $letter-size-L;
     font-weight: 500;
     background-color: $color-background-primary;
+    margin-top: -10px;
     padding: 8px ;
     color: $color-letter-secondary;
   }
