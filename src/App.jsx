@@ -7,6 +7,7 @@ import Favorites from './pages/Favorites';
 import NotFound from './pages/NotFound';
 import BlueTheme from './templates/BlueTheme';
 import Category from './pages/Category';
+import Detail from './pages/Detail';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path:"category/:name",
         element: <Category/>
+      },
+      {
+        path:"category/:name/detail/:id",
+        element: <Detail/>,
       }
     ]
   },

@@ -10,10 +10,32 @@
   .card__head, .card__buttons {
     position: absolute;
     display: flex;
-    left: 0;
-    right: 0;
+    left: 5px;
+    right: 5px;
     justify-content: space-between;
   }
+
+  .card__buttons {
+    button {
+      opacity: 1;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: none;
+      background-color: $color-background-card;
+      transition: all 0.5s ease;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: all 0.5s ease;
+      }
+    }
+
+    .invisble {
+      opacity: 0;
+    }
+  }
+
   .card__head {
     bottom: 0;
     z-index: 2;
@@ -27,7 +49,7 @@
     }    
   }
   .card__buttons {
-    top: 0;
+    top: 10px;
   }
 
   .card__image {

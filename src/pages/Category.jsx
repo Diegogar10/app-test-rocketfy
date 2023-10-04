@@ -3,9 +3,9 @@ import ListCategories from "../container/ListCategories";
 import RecipeCard from "../components/RecipeCard";
 
 const Category = () => {
-  const {name, recipes} = useRecipesByCategories();
 
-  console.log(name, recipes);
+  const {name, recipes} = useRecipesByCategories();
+  
   return(
     <ListCategories title={`Recipes of ${name}`}>
       {recipes && recipes.map((data)=>(
