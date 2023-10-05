@@ -8,6 +8,7 @@ import NotFound from './pages/NotFound';
 import BlueTheme from './templates/BlueTheme';
 import Category from './pages/Category';
 import Detail from './pages/Detail';
+import Register from './pages/Register';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path:"login",
         element: <Login/>
+      },
+      {
+        path:"register",
+        element: <Register/>
       },
       {
         path:"profile",

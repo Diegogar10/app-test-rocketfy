@@ -10,14 +10,17 @@ const ProviderApp = ({ children }) => {
 
 /*Estado Global para el manejo de inicio de sesión que me protege ciertas rutas */
   const [isAuth, setIsAuth] = useState(false);
+  const [token, setToken] = useState('');
   const [favoritesList, setFavoritesList] = useState(localFavorites);
 
 
   
-  const activateAuth = () => {
+  const activateAuth = (token) => {
+    setToken(token)
     setIsAuth(true);
   }
   const unActivateAuth = () => {
+    setToken('');
     setIsAuth(false);
   }
 
@@ -28,6 +31,7 @@ const ProviderApp = ({ children }) => {
 
   const globalValues = {
     isAuth,
+    token,
     activateAuth,
     unActivateAuth,
     favoritesList,

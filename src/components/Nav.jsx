@@ -10,16 +10,16 @@ import { ContextApp } from "../context";
 
 const Nav = () => {
 
-  const [nameLink, setNameLink] = useState('Log In');
-  const { isAuth } = useContext(ContextApp);
+  const [ link, setLink ] = useState(true);
+  const { isAuth, unActivateAuth } = useContext(ContextApp);
   const path = useHref();
 
   /* Cambia el nombre del link segun el estado global de autentificación */
   useEffect(()=>{
     if(!isAuth) {
-      setNameLink('Log In');
+      setLink(true);
     } else {
-      setNameLink('Log Out');
+      setLink(false);
     }
 
   }, [isAuth]);
@@ -52,7 +52,9 @@ const Nav = () => {
         {linkSeleted(path, '/' ,<><img src={homeIcon} alt="icon home"/><Link to={'/'}>Home</Link></>)}
         {linkSeleted(path, '/favorites' ,<><img src={favoritesIcon} alt="icon favorites"/><Link to={'/favorites'}>Favorites</Link></>)}
         {linkSeleted(path, '/profile' ,<><img src={profileIcon} alt="icon profile"/><Link to={'/profile'}>Profile</Link></>)}
-        {linkSeleted(path, '/login' ,<><img src={loginIcon} alt="icon login"/><Link to={'/login'}>{nameLink}</Link></>)}
+        {link 
+          && linkSeleted(path, '/login' ,<><img src={loginIcon} alt="icon login"/><Link to={'/login'}>Login</Link></>)
+          || linkSeleted(path, '/login' ,<><img src={loginIcon} alt="icon login"/><button onClick={unActivateAuth} >Logout</button></>)}
       </ul>
     </nav>
   )
