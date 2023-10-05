@@ -38,6 +38,11 @@ const router = createBrowserRouter([
       {
         path:"category/:name/detail/:id",
         element: <Detail/>,
+      },
+      //Se agregó ruta para que puedan ver el detalle de la receta desde favoritos
+      {
+        path:"favorites/detail/:id",
+        element: <Detail/>,
       }
     ]
   },

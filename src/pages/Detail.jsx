@@ -1,6 +1,7 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useRecipeById from "../hooks/useRecipeById";
 import getArrayIngredients from "../utils/organizeUtil";
+import backIcon from './../assets/icons/back-icon.svg';
 import './Detail.scss';
 
 const Detail = () => {
@@ -13,6 +14,7 @@ const Detail = () => {
     <>
       { data && <section className="recipe__container">
       <div className="recipe__origin">
+          <Link to={-1}><img src={backIcon} alt="icono back" /></Link>
           <h3>Country: </h3>
           <p>{data[0].strArea}</p>
           <h3>Category: </h3>

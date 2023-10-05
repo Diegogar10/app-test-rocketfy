@@ -4,6 +4,7 @@ const getArrayIngredients = (data) => {
   const measure = [];
   const ingredientsMap = [];
 
+  //Hamos un mapeo de la informacion organizando los ingredinetes con las cantidades y devolvemos una array con objetos
   Object.entries(data).forEach(([key,value])=>{
     if(key.includes('strIngredient')){
       if(value != ''){
