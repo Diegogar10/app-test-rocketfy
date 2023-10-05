@@ -1,4 +1,4 @@
-const registerUtil = (form) => {
+const registerService = (form) => {
   
   const UrlAPI = import.meta.env.VITE_API_USER;
 
@@ -26,4 +26,4 @@ const registerUtil = (form) => {
   return query();
 } 
 
-export default registerUtil;
+export default registerService;

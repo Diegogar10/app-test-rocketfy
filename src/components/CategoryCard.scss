@@ -4,11 +4,8 @@
   margin: 0 auto;
   width: 160px;
   height: 175px;
-  margin: 10px;
-  overflow: hidden;
-  border-radius: 10px;
+  @include card;
   background-color: $color-background-card;
-  box-shadow: $color-background-primary 0 0 8px;
   transition: all 0.5s ease ;
   &:hover {
     transform: scale(1.05);
@@ -23,7 +20,8 @@
     
   }
   figcaption {
-    font-size: $letter-size-L;
+    width: 100%;
+    font-size: $letter-size-M;
     font-weight: 500;
     background-color: $color-background-primary;
     margin-top: -10px;

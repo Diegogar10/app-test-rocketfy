@@ -1,0 +1,28 @@
+@import './../assets/styles/globals.scss';
+
+.profile__container {
+  width: 300px;
+  height: 400px;
+  @include card;
+  img {
+    border-radius: 50%;
+  }
+
+  h2 {
+    font-size: $letter-size-L;
+    font-weight: bold;
+    color: $color-background-primary;
+  }
+
+  p{
+    width: 80%;
+    text-align: start;
+    color: $color-background-primary;
+    font-weight: bold;
+    
+    span{
+      color: $color-letter-dark;
+      font-weight: 400;
+    }
+  }
+}

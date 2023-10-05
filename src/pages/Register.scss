@@ -1,0 +1,31 @@
+@import './../assets/styles/globals.scss';
+
+.form__register {
+  width: 300px;
+  height: 400px;
+  padding: 30px;
+  box-sizing: border-box;
+  @include card;
+  
+  form{
+    @include form;
+  }
+}
+
+.message__container {
+  h2 {
+    font-size: $letter-size-L;
+    color: $color-dark-letter-primary;
+    font-weight: 500;
+    margin-bottom: 20px ;
+  }
+  p {
+    font-size: $letter-size-s;
+    color: $color-letter-dark;
+    font-weight: 400;
+    margin-bottom: 20px ;
+  }
+  button {
+    @include button;
+  }
+}

@@ -1,4 +1,4 @@
-const loginUtil = (form) => {
+const loginService = (form) => {
   
   const UrlAPI = import.meta.env.VITE_API_USER;
 
@@ -22,4 +22,4 @@ const loginUtil = (form) => {
   return query();
 } 
 
-export default loginUtil;
+export default loginService;
