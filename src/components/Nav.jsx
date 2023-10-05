@@ -54,7 +54,7 @@ const Nav = () => {
         {linkSeleted(path, '/profile' ,<><img src={profileIcon} alt="icon profile"/><Link to={'/profile'}>Profile</Link></>)}
         {link 
           && linkSeleted(path, '/login' ,<><img src={loginIcon} alt="icon login"/><Link to={'/login'}>Login</Link></>)
-          || linkSeleted(path, '/login' ,<><img src={loginIcon} alt="icon login"/><button onClick={unActivateAuth} >Logout</button></>)}
+          || linkSeleted(path, '/login' ,<><img src={loginIcon} alt="icon login"/><Link to={'/login'}><button onClick={unActivateAuth}>Logout</button></Link></>)}
       </ul>
     </nav>
   )

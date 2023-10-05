@@ -1,26 +1,31 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ContextApp } from "../context";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import userService from "../services/userService";
 import imageDefault from './../assets/images/perfill.jpg'
 import './profile.scss';
 
 const Profile = () => {
-  const { isAuth, token } = useContext(ContextApp);
+  const navigate = useNavigate();
+  const { isAuth, token, setLoadFav } = useContext(ContextApp);
   const [ user, setUser ] = useState();
   
   const getUser = async () => {
     const user = await userService(token);
+    await setLoadFav(user.email);
     await setUser(user);
   }
 
-  if( !isAuth ) {
-    return <Navigate to='/login' />
-  } else {    
-    if( token !== ''){
-      getUser(token);
+  useEffect(()=>{
+    if( !isAuth ) {
+      navigate('/login');
+    } else {    
+      if( token !== ''){
+        getUser(token);
+      }
     }
-  }
+  },[])
+
 
   return (
     <>
