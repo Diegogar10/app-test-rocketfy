@@ -14,6 +14,7 @@ const Favorites = () => {
   
 
   if( !isAuth ) {
+    //Navegamos a otra ruta si no estamos autenticados
     return <Navigate to='/' />
   } else {    
     return(

@@ -6,6 +6,7 @@ import './Detail.scss';
 
 const Detail = () => {
   
+  //Leemos los parametros que nos vienen por url
   const { id } = useParams(); 
   const recipe = useRecipeById(id);
   const data = recipe.meals;
@@ -14,6 +15,7 @@ const Detail = () => {
     <>
       { data && <section className="recipe__container">
       <div className="recipe__origin">
+          {/* navegamos atras con link */}
           <Link to={-1}><img src={backIcon} alt="icono back" /></Link>
           <h3>Country: </h3>
           <p>{data[0].strArea}</p>
