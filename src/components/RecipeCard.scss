@@ -38,7 +38,7 @@
 
   .card__head {
     bottom: 0;
-    z-index: 2;
+    z-index: 1;
     color: $color-letter-secondary;
     font-weight: 300;
     h2{
@@ -74,5 +74,11 @@
       height: 220px;
       object-fit: cover;
     }
+  }
+}
+
+@media (max-width: 680px) { 
+  .recipes__card {
+    width: 175px;
   }
 }

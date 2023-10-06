@@ -69,3 +69,24 @@
     }
   }
 }
+
+@media (max-width: 680px) {
+  .menu__container {
+    width: 100vw;
+    position: absolute;
+    z-index: 3;
+    transform: translate(-100vw);
+    transition: all 0.5s ease;
+    
+    .menu__logo {
+      width: 150px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+  }
+  
+  .visible{
+    transform: translate(0px);
+    transition: all 0.5s ease;
+  }
+}

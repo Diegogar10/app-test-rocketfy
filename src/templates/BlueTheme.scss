@@ -10,3 +10,9 @@
     width: 100%;
   }
 }
+
+@media (max-width: 680px) {
+  .page__container{
+    width: 90%;
+  }
+}

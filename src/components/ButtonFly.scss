@@ -1,0 +1,22 @@
+.button__fly{
+  position: absolute;
+  display: none;
+  left: 20px;
+  top: 5px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  z-index: 4;
+   img{
+    width: 25px;
+    height: 25px;
+    margin: auto;
+   }
+}
+
+@media (max-width: 680px) {
+  .button__fly{
+    display: block;
+  }
+}

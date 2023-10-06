@@ -13,6 +13,7 @@ const ProviderApp = ({ children }) => {
   const [isAuth, setIsAuth] = useState(false);
   const [token, setToken] = useState('');
   const [favoritesList, setFavoritesList] = useState([]);
+  const [isVisible, setIsVisible] = useState(false);
   
   
   const activateAuth = (token) => {
@@ -36,6 +37,13 @@ const ProviderApp = ({ children }) => {
     setFavoritesList(getDataLocal(`v1-${email}`));
   }
 
+  const toggleHandler = () => {
+    setIsVisible(!isVisible);
+  }
+  const closeHandler = () => {
+    setIsVisible(false);
+  }
+
   const globalValues = {
     isAuth,
     token,
@@ -43,7 +51,10 @@ const ProviderApp = ({ children }) => {
     unActivateAuth,
     favoritesList,
     addRecipesFavorites,
-    setLoadFav
+    setLoadFav,
+    isVisible,
+    toggleHandler,
+    closeHandler
   }
 
   return(

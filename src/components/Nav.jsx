@@ -11,7 +11,7 @@ import { ContextApp } from "../context";
 const Nav = () => {
 
   const [ link, setLink ] = useState(true);
-  const { isAuth, unActivateAuth } = useContext(ContextApp);
+  const { isAuth, unActivateAuth, isVisible, closeHandler } = useContext(ContextApp);
   const path = useHref();
 
   /* Cambia el nombre del link segun el estado global de autentificación */
@@ -41,7 +41,7 @@ const Nav = () => {
     }
   }
   return(
-    <nav className="menu__container">
+    <nav onClick={closeHandler} className={ !isVisible ? 'menu__container': 'menu__container visible'}>
       <div className="menu__logo">
         <img src={logo} alt="logo de menu" />
       </div>

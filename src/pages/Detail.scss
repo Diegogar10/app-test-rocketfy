@@ -140,3 +140,19 @@
     margin-right: 50px;
   }
 }
+
+@media (max-width: 680px) {
+  .recipe__container {
+    display: block;
+    position: relative;
+    overflow:auto;
+    .recipe__origin {
+      padding-left: 20px;
+      a{
+        position: absolute;
+        left: 5px;
+        top: 40px;
+      }
+    }
+  }
+}
