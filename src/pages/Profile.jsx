@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ContextApp } from "../context";
-import { useNavigate } from "react-router-dom";
-import userService from "../services/userService";
 import imageDefault from './../assets/images/perfill.jpg';
+import { useNavigate } from "react-router-dom";
 import './profile.scss';
+import userService from "../services/userService";
 
 const Profile = () => {
   const navigate = useNavigate();
