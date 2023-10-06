@@ -22,7 +22,11 @@ Esta aplicación reúne las mejores recetas, que podrás ver a detalle y si te r
 
 Iniciamos en el home con una lista de categorías donde encontraremos preparaciones con pollo, carne, desayunos, postres entre otros.
 
+<<<<<<< HEAD
 (./src/assets/images/home-categorias.JPG)
+=======
+(src/assets/images/home-categorias.JPG)
+>>>>>>> 98e2e2954a700f0046f39a8cc863db7c0669ea9b
 
 Una vez seleccionamos una categoría, la aplicación nos trae un número de recetas de esa categoría donde podremos ver el nombre, llevarnos una visual del platillo y si queremos a través de un botón lograr ver el detalle de la receta con la explicación, inclusive tenemos acceso a un video de la receta. Sí tenemos una sesión de usuario abierta, previo al registro, tendremos acceso a un botón de favoritos en la lista de recetas donde se agregan a una sección especial de favoritos para todo aquello que nos encantó.
 
