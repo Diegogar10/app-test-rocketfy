@@ -34,4 +34,4 @@ Cuando tenemos recetas con like, podemos ir a nuestra sección de favoritos dond
 
 Para tener acceso para todas las funciones recuerda ir a la página de login en el menú, donde encontraremos un formulario de registro e ingreso.
 
-- [Mira la aplicación funcionando en](https://github.com/)
+- [Mira la aplicación funcionando](https://apptestrocketfy.netlify.app/)
