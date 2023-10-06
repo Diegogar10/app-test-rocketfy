@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { ContextApp } from "../context";
 import { useNavigate } from "react-router-dom";
 import userService from "../services/userService";
-import imageDefault from './../assets/images/perfill.jpg'
+import imageDefault from './../assets/images/perfill.jpg';
 import './profile.scss';
 
 const Profile = () => {
